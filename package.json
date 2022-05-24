@@ -4,6 +4,8 @@
   "description": "projecto final de la materia",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=production node ./dist/bin/www",
+    "dev": "NODE_ENV=development babel-watch ./server/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
