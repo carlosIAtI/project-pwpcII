@@ -1,13 +1,10 @@
-// Importar Winston
 import winston, { format } from 'winston';
 
 // Se obtiene la ruta a la raiz de proyecto
 import appRoot from 'app-root-path';
 
-// desestructuro componentes para el formato personalizado
 const { combine, timestamp, label, printf, colorize } = format;
 
-// Definiendo un esquema de colores
 const colors = {
   error: 'red',
   warn: 'yellow',
@@ -16,18 +13,13 @@ const colors = {
   debug: 'blue',
 };
 
-// Agregando el esquema de colores a winston
 winston.addColors(colors);
 
 // Creando formato para la consola
 const myConsoleFormat = combine(
-  // Agregando colores al formato
   colorize({ all: true }),
-  // Agregando una etiqueta
   label({ label: '🎫' }),
-  // Agregando la fecha
   timestamp({ format: 'DD-MM-YYYY HH:mm:ss' }),
-  // Funcion de impresión
   printf(
     (info) =>
       `${info.level}: ${info.label}: ${[info.timestamp]}: ${info.message}`
@@ -38,9 +30,7 @@ const myConsoleFormat = combine(
 const myFileFormat = combine(
   // Sin color
   format.uncolorize(),
-  // Agregando la fecha
   timestamp({ format: 'DD-MM-YYYY HH:mm:ss' }),
-  // Salida en formato Json
   format.json()
 );
 
@@ -90,8 +80,6 @@ const logger = winston.createLogger({
 
 // Morgan ---> consola
 // Morgan ---> [winston] ---> [transportes]
-// Estableciendo un flujo de entrada que servira
-// para interceptar el log de morgan
 logger.stream = {
   write(message) {
     logger.info(message);

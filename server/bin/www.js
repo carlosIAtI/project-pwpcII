@@ -8,9 +8,9 @@ import app from '@s/app';
 import Debug from 'debug';
 import http from 'http';
 
-// Importando nuestro logger
+// logger
 import winston from '../config/winston';
-// IMportando el objeto de las llaves de configuracion
+
 import configKeys from '../config/configKeys';
 
 /**
@@ -21,19 +21,18 @@ function normalizePort(val) {
   const port = parseInt(val, 10);
 
   if (Number.isNaN(port)) {
-    // named pipe
+    
     return val;
   }
 
   if (port >= 0) {
-    // port number
     return port;
   }
 
   return false;
 }
 
-// Creando instancia del debugger
+// debugger
 const debug = Debug('projnotes-2022a:server');
 
 /**
@@ -91,7 +90,6 @@ function onListening() {
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port); // Pone al server a escuchar
-// Se registran eventos
-server.on('error', onError); // En caso de error
+server.listen(port); 
+server.on('error', onError); 
 server.on('listening', onListening); // Cuando esta escuchando

@@ -2,16 +2,16 @@
 const index = (req, res) => {
     // Calculando emojie
     const emojieDataset = [
-      '💻',
-      '👨‍💻',
-      '🎈',
-      '🎄',
-      '🦺',
-      '🎢',
-      '🎁',
-      '🚆',
-      '🌍',
-      '♥',
+      '🔱',
+      '🪬',
+      '🐧',
+      '💓',
+      '❌',
+      '🧩',
+      '💪',
+      '🤖',
+      '👾',
+      '🦉',
     ];
     const emojie =
       emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
@@ -27,11 +27,11 @@ const index = (req, res) => {
   // URL: Get /about
   const about = (req, res) => {
     res.render('home/aboutView', {
-      name: 'PhD Ivan Rivalcoba',
-      email: 'jorge.rr@gamadero.tecnm.mx',
-      url: 'https://github.com/rivalcoba-dev',
+      name: 'carlos hernandez martinez',
+      email: 'l171130075@gamadero.tecnm.mx',
+      url: 'https://github.com/carlosIAtI/project-pwpcII',
       description:
-        'Aplicación que te permite registrar ideas de proyectos. PwpcII-2022A',
+        'Projecto para la materia de pwpcII-2022a',
       version: '0.0.alpha',
     });
   };
