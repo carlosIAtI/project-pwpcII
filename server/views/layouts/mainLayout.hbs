@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <!-- Iconos de google -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Cargando Materilizecss -->
-    <link rel="stylesheet" href="/vendor/materializecss/css/materialize.min.css">
-    <!-- Cargando etilos de la app -->
-    <link rel='stylesheet' href='/stylesheets/styles.css' />
-  </head>
-  <body>
-    {{!-- Llamando a la vista parcial de la navbar  --}}
-    {{> _navbar}}
-    <div class="container">
-      {{{body}}}
-    </div>
-    <!-- Materialize script -->
-    <script src="/vendor/materializecss/js/materialize.min.js"></script>
-    <!-- Bundle de la App -->
-    <script src="/javascripts/bundle.js"></script>
-  </body>
+
+<head>
+  <title>{{title}}</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <!-- Iconos de google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Cargando Materilizecss -->
+  <link rel="stylesheet" href="/vendor/materializecss/css/materialize.min.css">
+  <!-- Cargando etilos de la app -->
+  <link rel='stylesheet' href='/stylesheets/styles.css' />
+</head>
+
+<body>
+  {{!-- Llamando a la vista parcial de la navbar --}}
+  {{> _navbar}}
+  <div class="container">
+    {{{body}}}
+  </div>
+  <!-- Materialize script -->
+  <script src="/vendor/materializecss/js/materialize.min.js"></script>
+  <!-- Bundle de la App -->
+  <script src="/javascripts/bundle.js"></script>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/vendor/materializecss/js/materialize.js"></script>
+  <script src="/vendor/materializecss/js/init.js"></script>
+
+</body>
+
 </html>

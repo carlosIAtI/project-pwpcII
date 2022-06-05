@@ -6,6 +6,7 @@ import homeRouter from './homeRouter';
 const addRoutes = (app) => {
   /* Agregando enrutador a Home */
   app.use('/', homeRouter);
+
 };
 
 export default {

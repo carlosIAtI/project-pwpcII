@@ -17,8 +17,8 @@ const index = (req, res) => {
       emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
     // View-Models
     const viewModel = {
-      title: 'Index Controller Working!!!',
-      author: 'Ivan Rivalcoba',
+      title: 'Project is Ready🏋️🏋️🏋️',
+      author: 'Carlos Hernandez Martinez',
       emojie,
     };
     res.render('home/indexView', viewModel);
@@ -27,7 +27,7 @@ const index = (req, res) => {
   // URL: Get /about
   const about = (req, res) => {
     res.render('home/aboutView', {
-      name: 'carlos hernandez martinez',
+      name: 'Carlos Hernandez Martinez',
       email: 'l171130075@gamadero.tecnm.mx',
       url: 'https://github.com/carlosIAtI/project-pwpcII',
       description:
@@ -35,10 +35,18 @@ const index = (req, res) => {
       version: '0.0.alpha',
     });
   };
+
+    // URL: Get /about
+    const contact = (req, res) => {
+      res.render('home/contactView', {
+
+      });
+    };
   
   export default {
     // Action Methods
     index,
     about,
+    contact,
   };
   
