@@ -12,8 +12,9 @@ async connect(){
     try {
         //Agregandos la librerias globales de es6 a moongose
         mongoose.Promise = global.Promise
-        winston.info(`🧩 Conectando a la base de datos ${this.url}`)
+        winston.info(`🧩 Conectando a la base de datos ${this.url}`);
         const connection = await mongoose.connect(this.url);
+        if(connection){winston.info(`✅ Conectado a la base de datos ${this.url}`);}
         return connection;
     } catch (error) {
         winston.info(`❌ Error databases ❌ `)

@@ -18,8 +18,8 @@ router.get('/about', homeController.about);
 router.get('/contact', homeController.contact);
 
 router.post('/contact', Validate({
-    shape: contactValidator.projectSchema,
-    getObject: contactValidator.getProject,
+    shape: contactValidator.contactSchema,
+    getObject: contactValidator.getContact,
   }), contacController.addPost);
 
 // Exportando Router

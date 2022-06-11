@@ -1,13 +1,14 @@
 import * as Yup from 'yup';
 
-const projectSchema = Yup.object().shape({
+const contactSchema = Yup.object().shape({
     name: Yup.string().required(`Se requiere un nombre`),
     email: Yup.string().required(`Se requiere un email`),
-    mensaje: Yup.string(`El Mensaje esta limitada a 500 caracteres`)
+    mensaje: Yup.string()
+    .max(500, 'La descripción esta limitada a 500 caracteres')
     .required(`Se require un mensaje`),
 });
 
-const getProject = (req) => {
+const getContact = (req) => {
     const { name, email, mensaje } = req.body;
 
     return {
@@ -18,5 +19,5 @@ const getProject = (req) => {
 };
 
 
-export default { projectSchema, getProject };
+export default { contactSchema,  getContact };
 
