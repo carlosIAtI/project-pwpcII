@@ -17,7 +17,7 @@ const index = (req, res) => {
       emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
     // View-Models
     const viewModel = {
-      title: 'Project is Ready🏋️🏋️🏋️',
+      title: 'Myblog🔱🔱',
       author: 'Carlos Hernandez Martinez',
       emojie,
     };

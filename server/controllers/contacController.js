@@ -39,7 +39,7 @@ const addPost = async (req, res) => {
       log.info('salving menssaje...⏱️');
       contact = await contactModel.save();
       log.info('Menssaje save...✅');
-      return res.redirect('/contact');
+      return res.redirect('/messages');
     } catch (error) {
       log.error(`Error databases ${error.message}`);
       return res.status(500).json({ error })

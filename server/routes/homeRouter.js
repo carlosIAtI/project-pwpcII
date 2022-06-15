@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import homeController from '../controllers/homeController';
 import contacController from '../controllers/contacController';
+import menssagesController from '../controllers/menssagesController'
 // Validate
 import Validate from '../validators/valideteFactory'
 
@@ -22,5 +23,6 @@ router.post('/contact', Validate({
     getObject: contactValidator.getContact,
   }), contacController.addPost);
 
+  router.get('/messages', menssagesController.list)
 // Exportando Router
 export default router;

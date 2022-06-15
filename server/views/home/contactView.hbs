@@ -26,7 +26,10 @@
               Email
             </label>
             <input placeholder="Ingrese su correo electronico" type="text" id="email" name="email" class="validate" required/>
-            <span class="helper-text" data-error="Debe ingresar un mensaje" data-success="Correcto"></span>
+            <span class="helper-text" data-error="Debe ingresar un correo" data-success="Correcto"></span>
+            {{#if errorModel.emailError}}
+            <span style="color:red">Error: {{errorModel.emailError}}</span>
+            {{/if}}
           </div>
           <div class="input-field">
             <label for="mensaje">
