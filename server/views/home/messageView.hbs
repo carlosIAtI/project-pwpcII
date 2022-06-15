@@ -8,9 +8,11 @@
                 <ul>
                     {{#each messages}}
                     <div class="card-panel">
-                        {{!-- <span class="teal-text text-darken-3">{{ this }}</span> --}}
+                        <span class="back-text ">Nombre: {{ this.name }}</span>
                         <br>
-                        <span class="teal-text text-darken-3">{{ this }}</span>
+                        <span class="back-text ">Email: {{ this.email }}</span>
+                        <br>
+                        <span class="teal-text text-darken-3">{{ this.mensaje }}</span>
 
                     </div>
                     {{/each}}
