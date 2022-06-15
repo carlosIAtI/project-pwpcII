@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://user-images.githubusercontent.com/42922067/172060348-2a04a044-631a-44ca-a62a-6eeaf7f58fa7.svg"
+          alt="blue print image" />
+        <span class="card-title">
+          Contact Me
+        </span>
+      </div>
+      <form autocomplete="off" action="/contact" method="POST">
+        <div class="card-content">
+          <div class="input-field">
+            <label for="name">
+              Nombre
+            </label>
+            <input placeholder="Ingrese su Nombre" type="text" id="name" name="name" class="validate"
+              value="{{contact.name}}" required />
+            <span class="helper-text" data-error="Debe ingresar su Nombre" data-success="Correcto"></span>
+            {{#if errorModel.nameError}}
+            <span style="color:red">Error: {{errorModel.nameError}}</span>
+            {{/if}}
+          </div>
+          <div class="input-field">
+            <label for="email">
+              Email
+            </label>
+            <input placeholder="Ingrese su correo electronico" type="text" id="email" name="email" class="validate" required/>
+            <span class="helper-text" data-error="Debe ingresar un correo" data-success="Correcto"></span>
+            {{#if errorModel.emailError}}
+            <span style="color:red">Error: {{errorModel.emailError}}</span>
+            {{/if}}
+          </div>
+          <div class="input-field">
+            <label for="mensaje">
+              Mensaje
+            </label>
+            <textarea name="mensaje" id="mensaje" class="materialize-textarea"></textarea>
+            {{contact.mensaje}}
+            <span
+            class="helper-text"
+            data-error="Debe ingresar un mensaje"
+            data-success="Correcto"></span>
+            {{#if errorModel.mensajeError}}
+            <span style="color:red"> 
+              Error: {{errorModel.mensajeError}}
+            </span>
+            {{/if}}
+          </div>
+        </div>
+        <div class="card-action">
+          <button type="submit" class="blue darken-3  teal waves-effect waves-light btn">
+            <i class="material-icons left">
+              save
+            </i>
+            Registrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
